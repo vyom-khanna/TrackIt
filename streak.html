@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streak - TrackIt</title>
+    <link rel="stylesheet" href="streak.css">
+</head>
+<body>
+    <div id="header">
+        <div id="name">
+            <h1>Track-It</h1>
+        </div>
+        <a href="log.html" id="Log" style="text-decoration: none; color: inherit;">
+            <h1>Log</h1>
+        </a>
+        <a href="streak.html" id="Streak" style="text-decoration: none; color: inherit;">
+            <h1>Streak</h1>
+        </a>
+    </div>
+
+    <div id="space"></div>
+
+    <div class="streak-container">
+        <!-- Statistics -->
+        <div class="streak-stats">
+            <div class="stat-box">
+                <div class="stat-number" id="currentStreak">0</div>
+                <div class="stat-label">Current Streak</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="totalDays">0</div>
+                <div class="stat-label">Days Logged</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="bestStreak">0</div>
+                <div class="stat-label">Best Streak</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="allGoalsMet">0</div>
+                <div class="stat-label">Perfect Days</div>
+            </div>
+        </div>
+
+        <!-- Heatmap -->
+        <h2 class="heatmap-title">Last 52 Weeks</h2>
+        
+        <div class="heatmap-container">
+            <!-- Month Labels -->
+            <div class="month-labels" id="monthLabels"></div>
+
+            <!-- Day Labels -->
+            <div class="day-labels" id="dayLabels"></div>
+
+            <!-- Heatmap Grid -->
+            <div id="heatmapGrid"></div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #0f0f0f;"></div>
+                <span>No data</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #0d3d1d;"></div>
+                <span>1 goal</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #1a5c34;"></div>
+                <span>2 goals</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #2d8659;"></div>
+                <span>3 goals</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #00ff00;"></div>
+                <span>All 4 goals</span>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="Log.html" style="color: #00ff00; text-decoration: none; font-size: 16px; font-weight: bold;">
+                ← Back to Log
+            </a>
+        </div>
+    </div>
+
+    <script src="streak.js"></script>
+</body>
+</html>

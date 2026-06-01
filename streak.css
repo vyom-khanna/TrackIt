@@ -1,0 +1,258 @@
+/* Heatmap Container */
+.heatmap-container {
+    background: #0a0a0a;
+    padding: 30px 20px;
+    border-radius: 8px;
+    border: 2px solid #00ff00;
+    overflow-x: auto;
+    margin: 30px 0;
+}
+
+.heatmap-title {
+    color: #fff;
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 20px;
+}
+
+/* Month Labels */
+.month-labels {
+    display: grid;
+    grid-template-columns: 50px repeat(53, 16px);
+    gap: 2px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.month-labels span {
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+    height: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Day Labels (Mon, Wed, Fri) */
+.day-labels {
+    display: grid;
+    grid-template-columns: 50px repeat(53, 16px);
+    gap: 2px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.day-label {
+    color: #888;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 5px;
+    grid-row: span 2;
+}
+
+/* Main Heatmap Grid */
+#heatmapGrid {
+    display: grid;
+    grid-template-columns: 50px repeat(53, 16px);
+    grid-template-rows: repeat(7, 16px);
+    gap: 2px;
+    padding: 0 10px;
+}
+
+/* Day Squares */
+.day-square {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 1px solid #222;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.day-square:hover {
+    transform: scale(1.2);
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+}
+
+/* Color Levels */
+.day-square.no-data {
+    background: #0f0f0f;
+}
+
+.day-square.level-1 {
+    background: #0d3d1d;
+}
+
+.day-square.level-2 {
+    background: #1a5c34;
+}
+
+.day-square.level-3 {
+    background: #2d8659;
+}
+
+.day-square.level-4 {
+    background: #00ff00;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    border: 1px solid #00ff00;
+    display: none;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.day-square:hover .tooltip {
+    display: block;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.legend-box {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    border: 1px solid #333;
+}
+
+/* Stats Section */
+.streak-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.streak-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 20px;
+    background: #1a1a1a;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+.stat-label {
+    color: #aaa;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Header Styling */
+#header{
+    display:flex;
+    background-color: rgb(54, 32, 32);
+    text-align:center;
+    height:10vh;
+}
+
+#name{
+    width:15%;
+    color:white;
+}
+
+#Log{
+    width: 42.5%;
+    text-align:center;
+    background-color: grey;
+}
+
+#Streak{
+    width: 42.5%;
+    text-align:center;
+    background-color: lightgreen;
+}
+
+body{
+    background-color:rgb(0, 0, 0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .streak-stats {
+        gap: 15px;
+    }
+
+    .stat-box {
+        min-width: 120px;
+        padding: 15px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    #heatmapGrid {
+        grid-template-columns: 30px repeat(53, 12px);
+        grid-template-rows: repeat(7, 12px);
+        gap: 1px;
+    }
+
+    .day-square {
+        width: 12px;
+        height: 12px;
+    }
+
+    .month-labels {
+        grid-template-columns: 30px repeat(53, 12px);
+    }
+
+    .day-labels {
+        grid-template-columns: 30px repeat(53, 12px);
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

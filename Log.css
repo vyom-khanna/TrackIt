@@ -1,0 +1,93 @@
+#header{
+    display:flex;
+    background-color: rgb(54, 32, 32);
+    text-align:center;
+    height:10vh;
+}
+
+#name{
+    width:15%;
+    color:white;
+}
+
+#Log{
+    width: 42.5%;
+    text-align:center;
+    background-color: grey;
+}
+
+#Streak{
+    width: 42.5%;
+    text-align:center;
+    background-color: lightgreen;
+}
+
+body{
+    background-color:rgb(0, 0, 0);
+}
+
+
+#logbuttons{
+    height:75vh;
+    text-align:center;
+}
+
+#space{
+    height:10vh;
+}
+
+#sleep{
+    height:15%;
+    width:50%;
+    border:7px solid green;
+    margin: 0 auto 5px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#steps{
+    height:15%;
+    width:50%;
+    border:7px solid green;
+    margin: 0 auto 5px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#gym{
+    height:15%;
+    width:50%;
+    border:7px solid green;
+    margin: 0 auto 5px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#development{
+    height:15%;
+    width:50%;
+    border:7px solid green;
+    margin: 0 auto 50px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logb{
+    color:white;
+    padding:0%;
+}
+
+#submit{
+    background-color:red;
+    height:10%;
+    width:20%;
+    border:7px solid green;
+    margin: 0 auto 5px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
